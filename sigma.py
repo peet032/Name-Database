@@ -2,14 +2,12 @@ import os
 
 
 def load_names(filename):
-    # Load names from a file.
     if os.path.exists(filename):
         with open(filename, 'r') as file:
             return [line.strip() for line in file.readlines()]
     return []
 
 def save_names(filename, names):
-    # Save names to a file.
     with open(filename, 'w') as file:
         for name in names:
             file.write(name + '\n')
